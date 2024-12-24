@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-
-import 'package:pocdoc_web/pages/adddocter_page.dart';
+import 'adddocter_page.dart';
+//import 'package:pocdoc_web/pages/adddocter_page.dart';
 
 class HospitalDashPage extends StatefulWidget {
   final String username;
