@@ -13,7 +13,9 @@ class SignUpPage extends StatefulWidget {
 }
 
 Future<void> sendOtp(String name,String email,String mobileno,String city) async {
+
   final url = Uri.parse('http://localhost:8585/api/register');
+
   final body = json.encode(
       {
         "name":name,
@@ -45,7 +47,9 @@ Future<void> sendOtp(String name,String email,String mobileno,String city) async
 }
 
 Future<void> verifyOtp(BuildContext context,String mobileNo, String otp) async {
+
   final url = Uri.parse('http://localhost:8585/api/login/otp-verify');
+
   final body = json.encode({"mobileno": mobileNo, "otp": otp});
 
   try {

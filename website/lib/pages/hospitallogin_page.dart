@@ -207,7 +207,7 @@ class HospitalLoginPage extends StatelessWidget {
 
     try {
       final response = await http.post(
-        Uri.parse('http://192.168.31.230:8585/api/hospitals/add'),
+        Uri.parse('http://192.168.59.56:8585/api/hospitals/add'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode(jsonData),
       );
@@ -246,7 +246,7 @@ class HospitalLoginPage extends StatelessWidget {
 
     try {
       final response = await http.post(
-        Uri.parse('http://192.168.31.230:8585/api/hospitals/login'),
+        Uri.parse('http://192.168.59.56:8585/api/hospitals/login'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode(loginData),
       );

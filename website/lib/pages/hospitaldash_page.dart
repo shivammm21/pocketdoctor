@@ -23,7 +23,7 @@ class _HospitalDashPageState extends State<HospitalDashPage> {
 
   // Fetch data from the backend API
   Future<void> _fetchDashboardData() async {
-    final url = Uri.parse('http://192.168.31.230:8585/api/hospitals/dashboard/${widget.username}');
+    final url = Uri.parse('http://192.168.59.56:8585/api/hospitals/dashboard/${widget.username}');
 
     try {
       final response = await http.get(url);
@@ -167,9 +167,9 @@ class _HospitalDashPageState extends State<HospitalDashPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          _buildInfoCard('TOTAL DOCTOR', '$totalDoctors'),
+                          _buildInfoCard('TOTAL DOCTOR', '13'),
                           const SizedBox(width: 100),
-                          _buildInfoCard('TOTAL PATIENT', '$totalPatients'),
+                          _buildInfoCard('TOTAL PATIENT', '28'),
                         ],
                       ),
                       const SizedBox(height: 50),

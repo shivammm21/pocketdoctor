@@ -138,7 +138,7 @@ class DocterLoginPage extends StatelessWidget {
 
     try {
       final response = await http.post(
-        Uri.parse('http://192.168.31.230:8585/api/doctor/login'),
+        Uri.parse('http://192.168.59.56:8585/api/doctor/login'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode(loginData),
       );

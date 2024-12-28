@@ -138,6 +138,7 @@ class _DashboardPageState extends State<DashboardPage> {
         SnackBar(content: Text('Failed to load profile image')),
       );
     }
+    print("$_profileImage");
   }
 
 
@@ -254,10 +255,328 @@ class _DashboardPageState extends State<DashboardPage> {
         children: [
           _buildDashboardContent(),
           Center(child: Text("Appointments Content")),
-          Center(child: Text("Nearby Content")),
+          // Nearby Content with X-ray and Pathology Lab Cards
+          Container(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 16.0), // Move the row to the top
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    // First Row of Cards
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start, // Align cards to the top
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        // First Card: X-ray
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.only(left: 16.0), // Left margin for X-ray card
+                            child: Card(
+                              color: Colors.white, // White color for the card
+                              elevation: 4,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: Container(
+                                height: 120,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(Icons.medical_services, size: 40, color: Colors.blue),
+                                    SizedBox(height: 8),
+                                    Text(
+                                      "X-ray",
+                                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 8), // Spacing between the cards
+                        // Second Card: Pathology Lab
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.only(right: 16.0), // Right margin for Pathology Lab card
+                            child: Card(
+                              color: Colors.white, // White color for the card
+                              elevation: 4,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: Container(
+                                height: 120,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(Icons.science, size: 40, color: Colors.red),
+                                    SizedBox(height: 8),
+                                    Text(
+                                      "Pathology Lab",
+                                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 16), 
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start, // Align cards to the top
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.only(left: 16.0), 
+                            child: Card(
+                              color: Colors.white, 
+                              elevation: 4,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: Container(
+                                height: 120,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(Icons.bloodtype, size: 40, color: Colors.red),
+                                    SizedBox(height: 8),
+                                    Text(
+                                      "Blood bank",
+                                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 8), // Spacing between the cards
+                        // Second Card: Pathology Lab
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.only(right: 16.0), // Right margin for Pathology Lab card
+                            child: Card(
+                              color: Colors.white, // White color for the card
+                              elevation: 4,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: Container(
+                                height: 120,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(Icons.monitor_heart, size: 40, color: Colors.purple),
+                                    SizedBox(height: 8),
+                                    Text(
+                                      "Sonography",
+                                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 16), 
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start, // Align cards to the top
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.only(left: 16.0), 
+                            child: Card(
+                              color: Colors.white, 
+                              elevation: 4,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: Container(
+                                height: 120,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(Icons.camera, size: 40, color: Colors.orange),
+                                    SizedBox(height: 8),
+                                    Text(
+                                      "CT Scan",
+                                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 8), // Spacing between the cards
+                        // Second Card: Pathology Lab
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.only(right: 16.0), // Right margin for Pathology Lab card
+                            child: Card(
+                              color: Colors.white, // White color for the card
+                              elevation: 4,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: Container(
+                                height: 120,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(Icons.donut_large, size: 40, color: Colors.green),
+                                    SizedBox(height: 8),
+                                    Text(
+                                      "MRI",
+                                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 16), 
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start, // Align cards to the top
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.only(left: 16.0), 
+                            child: Card(
+                              color: Colors.white, 
+                              elevation: 4,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: Container(
+                                height: 120,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(Icons.favorite, size: 40, color: Colors.pink),
+                                    SizedBox(height: 8),
+                                    Text(
+                                      "ECG",
+                                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 8), // Spacing between the cards
+                        // Second Card: Pathology Lab
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.only(right: 16.0), // Right margin for Pathology Lab card
+                            child: Card(
+                              color: Colors.white, // White color for the card
+                              elevation: 4,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: Container(
+                                height: 120,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(Icons.radio_button_checked, size: 40, color: const Color.fromARGB(255, 235, 221, 34)),
+                                    SizedBox(height: 8),
+                                    Text(
+                                      "PET Scan",
+                                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 16), 
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start, // Align cards to the top
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.only(left: 16.0), 
+                            child: Card(
+                              color: Colors.white, 
+                              elevation: 4,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: Container(
+                                height: 120,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(Icons.health_and_safety, size: 40, color: const Color.fromARGB(255, 30, 192, 233)),
+                                    SizedBox(height: 8),
+                                    Text(
+                                      "Dialysis",
+                                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 8), // Spacing between the cards
+                        // Second Card: Pathology Lab
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.only(right: 16.0), // Right margin for Pathology Lab card
+                            child: Card(
+                              color: Colors.white, // White color for the card
+                              elevation: 4,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: Container(
+                                height: 120,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(Icons.remove_red_eye, size: 40, color: const Color.fromARGB(255, 88, 88, 80)),
+                                    SizedBox(height: 8),
+                                    Text(
+                                      "Endoscopy",
+                                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
           Center(child: Text("History Content")),
         ],
       ),
+
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
@@ -275,7 +594,7 @@ class _DashboardPageState extends State<DashboardPage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.location_on, color: Colors.grey),
             label: '',
-            activeIcon: _buildActiveTabIcon(Icons.location_on, 'Track'),
+            activeIcon: _buildActiveTabIcon(Icons.location_on, 'Nearby Services'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.history, color: Colors.grey),

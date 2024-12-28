@@ -110,7 +110,7 @@ class _AddDoctorPageState extends State<AddDoctorPage> {
 
     List<String> user = name.split(" ");
 
-    final url = Uri.parse('http://192.168.31.230:8585/api/doctor/add'); // Replace with your API URL
+    final url = Uri.parse('http://192.168.59.56:8585/api/doctor/add'); // Replace with your API URL
     final body = jsonEncode({
       'hospitalId': id,
       'name': name,
